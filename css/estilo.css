@@ -1,0 +1,142 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales y tipografía */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8fafc;
+    color: #061539;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor principal del componente */
+.contenedor {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    max-width: 600px;
+    width: 100%;
+    padding: 32px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+
+}
+
+/* Encabezado */
+header h1 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    color: #0f172a;
+    text-align: center;
+}
+
+header p {
+    font-size: 16px;
+    color: #64748b;
+    margin: 0 0 24px 0;
+    text-align: center;
+}
+
+/* Lista de elementos */
+.lista {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Cada elemento del registro */
+.item {
+    display: grid;
+    grid-template-columns: 150px 30px 400px;
+    align-items: baseline;
+}
+
+/* Puntito indicador en la línea de tiempo */
+.item::before {
+    content: '';
+    position: absolute;
+    left: -30px;
+    top: 4px;
+    width: 10px;
+    height: 10px;
+    background-color: #3b82f6;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+}
+
+/* Fecha y texto */
+.fecha {
+    font-size: 13px;
+    font-weight: 600;
+    color: #64748b;
+    text-align: right;
+    padding-right: 15px;
+}
+
+.linea {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.linea::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: -20px; /* Conecta con el siguiente elemento */
+    width: 2px;
+    background-color: #e2e8f0;
+}
+
+.item:last-child .linea::before {
+    display: none;
+}
+
+.punto {
+    position: absolute;
+    top: 4px;
+    width: 10px;
+    height: 10px;
+    background-color: #3b82f6;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    z-index: 2; /* Para que quede por encima de la línea */
+}
+
+.texto {
+    font-size: 15px;
+    color: #1e293b;
+    margin: 0;
+    font-weight: 500;
+}
+
+footer{
+text-align: center;
+}
+
+/* xxl Extra Extra Large */
+@media (max-width: 1400px) {}
+
+/* xl Extra Large */
+@media (max-width: 1200px) {}
+
+/* lg Large */
+@media (max-width: 992px) {}
+
+/* md Medium */
+@media (max-width: 768px) {}
+
+/* sm Small */
+@media (max-width: 576px) {}
+
+/* Extra small */
+@media (max-width: 575.98px) {}
